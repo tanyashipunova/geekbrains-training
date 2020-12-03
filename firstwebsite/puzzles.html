@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студентки GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+		var score = 0;
+
+		function checkAnswer(inputId, answers){
+			var userAnswer = document.getElementById(inputId).value;
+			userAnswer = userAnswer.toLowerCase();
+			for(var i = 0; i < answers.length; i++){
+				if(userAnswer == answers[i]){
+					score++;
+					break;
+				}
+			}
+		}
+		
+		function checkAnswers() {
+
+			checkAnswer("userAnswer1", ["капуста", "cabbage"]);
+			checkAnswer("userAnswer2", ["арбуз", "melon"]);
+			checkAnswer("userAnswer3", ["подушка", "pillow"]);
+
+			alert("Вы отгадали " + score + " загадки");
+
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="#">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="translate.html">Словарик</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Игра в загадки</h1>
+
+			<div class="box">
+
+				<p>Загадка № 1: сто одежек и все без застежек. Что это?</p>
+				<input type="text" id="userAnswer1">
+
+				<p>Загадка № 2: без окон без дверей полна горница людей. Что это?</p>
+				<input type="text" id="userAnswer2">
+
+				<p>Загадка № 3: две боковушки и четыре ушка. Что это?</p>
+				<input type="text" id="userAnswer3">
+
+				<br>
+				<a href="#" onClick="checkAnswers();">Ответить</a>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Tanya Shipunova
+<div>
+
+
+</body>
+</html>
